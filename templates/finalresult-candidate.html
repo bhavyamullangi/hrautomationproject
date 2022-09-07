@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR_AUtOMATION</title>
+    <style>
+        #div1{
+          background-color:beige;
+          width:23.33%;
+          margin: 0 auto;
+          height:500px;
+        }
+         #div2{
+          background-color:beige;
+
+          text-align:center;
+          position:relative;
+          top:20%;
+          transfrom: translateX(20%);
+          transfrom: translateY(20%);
+        }
+
+
+      button disabled,
+      button[disabled]{
+      background-color: #4CAF50; /* green */
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin:4px 2px;
+     }
+     body{
+      color:orange;
+     }
+    ul li:before{
+        content:'\2713';
+        display: inline-block;
+        color:red;
+        padding:0 10px 0 0;
+    }
+    ul li{
+     list-style-type: none;
+     font-size: 2em;
+    }
+
+    </style>
+
+</head>
+<body>
+
+<h3>HR-candidate-steps</h3>
+
+    <div id="div1">
+        <div id="div2">
+        <form action="appilicant_Home" method="POST" class="post-form" enctype="multipart/form-data" >
+            <ul>
+                <li>   <button  disabled>upload-cv</button><br/></li>
+                <li>  <button  disabled>ccat-test</button><br/></li>
+                <li><button  disabled>tech-test</button><br/></li>
+    <p>Thanks for participating....!</p>
+            </ul>
+</form>
+    </div>
+    </div>
+
+</body>
+</html>

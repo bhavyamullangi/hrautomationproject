@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+    #details-id{
+          background-color:beige;
+
+        }
+</style>
+    <title>candidate-info</title>
+</head>
+<body>
+<div class="container">
+  <h1 class="alter-danger text-center p-2">candidate-info</h1>
+  <div class="row">
+    <div  id="details-id" class="col-sm-10 shadow p-5 offset-sm-1" >
+        <h2 class="text-center"> <u>Details</u></h2>
+         <p class="float-end">Applicantion No: {{candidate.id}}</p>
+         <p>Name: {{candidate.applicantName}}</p>
+         <p class="float-end">Email ID: {{candidate.email}}</p>
+         <p>CCAT-score: {{candidate.ccat_score}}</p>
+         <p>tect_test-score: {{candidate.testgorila_score}}</p>
+         <p>Attachment: <a href="{{candidate.cv.url}}">Download File</a></p>
+    <div class="text-center">
+     <a href="hr_search" class="btn btn-danger">Back to Home</a>
+    </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

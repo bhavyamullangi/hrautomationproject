@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+           rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+           crossorigin="anonymous">
+     <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <link rel="stylesheet" href="{% static 'css/apphome.css' %}">
+    <title>HR_AUtOMATION</title>
+    </head>
+<body >
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">RT</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="applicant_register.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#welcome">Home</a></li>
+          <li><a class="nav-link scrollto " href="#welcome">Welcome</a></li>
+          <li><a class="nav-link scrollto" href="#profile">profile</a></li>
+          <li><a class="nav-link scrollto " href="#tests">tests</a></li>
+          <li><a class="nav-link scrollto" href="#status">Status</a></li>
+          </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Welcome Section ======= -->
+  <section id="welcome" class="welcome">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h4>Welcome</h4>
+         </div>
+
+        <div class="row content">
+          <div class="col-lg-6 pt-4 pt-lg-0">
+             {% if user.is_authenticated %}
+              Welcome,<label id="name"> {{ user.username }} !</label>
+               {% endif %}
+              <p>Thanks for participating....!
+                  For further process:</p>
+              <p>Update your details in profile section....!</p>
+              <p>Take tests in  test section....!</p>
+              <p>check your status in status section....!</p>
+
+          </div>
+        </div>
+      </div>
+  </section><!-- End welcome Section -->
+     <!-- ======= tasks Section ======= -->
+  <section id="profile" class="profile">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h4>profile</h4>
+         </div>
+
+        <div class="row content">
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <ul>
+                <p>Select job-profile...!</p>
+                <li>upload-cv<br/></li>
+                <li>select job-role<br/></li>
+                <li>select company<br/></li>
+            </ul>
+              <a id= "edit" href="http://localhost:8000/applicant_register">click here for update your details</a>
+          </div>
+        </div>
+
+      </div>
+  </section><!-- End profile Section -->
+       <!-- ======= profile Section ======= -->
+  <section id="tests" class="tests">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h4>Tests</h4>
+         </div>
+
+        <div class="row content">
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <ul>
+                <p>Select your tests...!</p>
+                <a href="url">click here for ccat-test</a></br>
+                <a href="url">click here for tech-test</a>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End tests Section -->
+         <!-- ======= status Section ======= -->
+  <section id="status" class="status">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h4>Status</h4>
+         </div>
+
+        <div class="row content">
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <ul>
+                <p>Status about your profile...!</p>
+
+                <a href="url">click here for ccat-test</a></br>
+                <a href="url">click here for tech-test</a>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End status Section -->
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="{% static 'js/apphome.js' %}"></script>
+</body>
+</html>
