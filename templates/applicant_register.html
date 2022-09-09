@@ -13,22 +13,23 @@
 </head>
 <body style="background-image:url({% static 'images/bg.PNG'%})">
 
-<h2>APPILICANT-HOME</h2>
+<h2></h2>
      <div class="form" id="div1">
      <form class="form" id="indexform" action="" method="post" enctype="multipart/form-data" >
         <div class="form-control">
      {% csrf_token %}
-     {% for fm in form %}
+  {% for fm in form %}
 
        {{fm.label_tag}} {{fm}}
 
      {% endfor %}
+
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
         <p> <span id="reumemsg"></span></p>
 
      <input type="submit" value="Submit" id="submit"  class="btn btn-primary">
-      {% if form.non_field_errors %}
+  {% if form.non_field_errors %}
        {% for error in form.non_field_errors %}
         <p class="alert alert-danger my-3">{{error}}</p>
        {% endfor %}

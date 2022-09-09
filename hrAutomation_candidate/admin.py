@@ -1,5 +1,9 @@
 from django.contrib import admin
-from .models import hr_applicant_data_table
-
+from .models import applicant_data_table
 # Register your models here.
-admin.site.register(hr_applicant_data_table)
+admin.site.register(applicant_data_table)
+
+
+
+
+

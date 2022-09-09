@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from hrAutomation_candidate import views
 from hrAutomation_hradmin.views import *
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -33,7 +34,6 @@ urlpatterns = [
     path('hr_search',hr_search ,name='hr_search'),
     path('<int:pk>',views.applicant_info.as_view(), name='applicant_info'),
     path('accounts/', include('allauth.urls')),
-
 
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

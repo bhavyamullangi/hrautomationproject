@@ -23,14 +23,25 @@
      <form class="form" id="applicant_login" action="" method="post" enctype="multipart/form-data" >
         <div class="form-control">
       {% csrf_token %}
-           Log-in using :
+        {{form.as_p}}
+
+     <a id="link1"href="url">forgot password</a>
+     <a href="http://127.0.0.1:8000/applicant_register">new user?Register</a>
+            <br/>
+
+    <input type="submit" value="login" id="submit"  class="btn btn-primary"/>
+
+           {% for message in messages%}
+                <h3>{{message}}</h3>
+                {% endfor %}
           </div>
 
-
+          or Log-in using :
 
     <div class="alert alert-danger" role="alert">
-<a href="{% provider_login_url 'google' %}" class="alert-link">Clike Here</a>Login with Google Accounts.</br>
- <a href="{% provider_login_url 'linkedin_oauth2' %}" class="alert-link">Clike Here</a>Login with linkedin Accounts.
+        <a href="/accounts/google/login/" class="alert-link">Click Here</a>Login with Google Accounts.</br>
+         <a href="/accounts/linkedin_oauth2/login/" class="alert-link">Click Here</a>Login with linkedin Accounts.
+
    </div>
 
 

@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, request
 from django.shortcuts import render, redirect
 from django.views import View
-from hrAutomation_candidate.models import hr_applicant_data_table
+from hrAutomation_candidate.models import applicant_data_table
 from .models import hr_hradmin_data_table
 
 
@@ -55,5 +55,5 @@ def hr_login(request):
 
 def hr_search(request):
 
-    candidates = hr_applicant_data_table.objects.all()
+    candidates = applicant_data_table.objects.all()
     return render(request, 'hr_search.html', {'candidates': candidates})
